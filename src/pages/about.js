@@ -7,9 +7,10 @@ import Image from "next/image";
 
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
+import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
 
 import profilePic from "../../public/images/profile/developer-pic-2.jpeg";
-import Skills from "@/components/Skills";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -107,6 +108,8 @@ const about = () => {
           </div>
 
           <Skills />
+
+          <Experience />
         </Layout>
       </main>
     </>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 import { LinkArrow } from "@/components/Icons";
+import HireMe from "@/components/HireMe";
 
 import profilePic from "../../public/images/profile/developer-pic-1.png";
 
@@ -56,6 +57,7 @@ export default function Home() {
             </div>
           </div>
         </Layout>
+        <HireMe />
       </main>
     </>
   );

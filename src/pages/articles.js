@@ -43,7 +43,7 @@ const MovingImg = ({ title, img, link }) => {
       onMouseMove={handleMouse}
       onMouseLeave={handleMouseLeave}
     >
-      <h2 className="capitalize cursor-pointer text-xl font-semibold hover:underline">
+      <h2 className="capitalize dark:text-light cursor-pointer text-xl font-semibold hover:underline">
         {title}
       </h2>
       <FramerImage
@@ -62,20 +62,22 @@ const MovingImg = ({ title, img, link }) => {
 const Article = ({ img, title, date, link }) => {
   return (
     <motion.li
-      className="relative w-full p-4 py-6 my-4 flex items-center justify-between bg-light text-dark border border-solid border-dark rounded-xl border-r-8 border-b-8 first:mt-0"
+      className="relative w-full p-4 py-6 my-4 flex items-center justify-between bg-light text-dark dark:text-light dark:bg-dark border border-solid border-dark dark:border-light rounded-xl border-r-8 border-b-8 first:mt-0"
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: easeInOut } }}
     >
       <MovingImg title={title} img={img} link={link} />
-      <span className="text-primary font-semibold pl-4">{date}</span>
+      <span className="text-primary dark:text-primaryDark font-semibold pl-4">
+        {date}
+      </span>
     </motion.li>
   );
 };
 
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
   return (
-    <li className="relative col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-2xl" />
+    <li className="relative col-span-1 w-full p-4 bg-light dark:bg-dark border border-solid border-dark dark:border-light rounded-2xl">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-2xl" />
       <Link
         href={link}
         target="_blank"
@@ -94,10 +96,14 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
         target="_blank"
         className="w-full cursor-pointer hover:underline"
       >
-        <h2 className="capitalize text-2xl font-bold my-2">{title}</h2>
+        <h2 className="capitalize text-2xl font-bold dark:text-light my-2">
+          {title}
+        </h2>
       </Link>
-      <p className="text-sm mb-2 ">{summary}</p>
-      <span className="text-primary font-semibold">{time}</span>
+      <p className="text-sm mb-2 dark:text-light ">{summary}</p>
+      <span className="text-primary dark:text-primaryDark font-semibold">
+        {time}
+      </span>
     </li>
   );
 };
@@ -134,7 +140,7 @@ const articles = () => {
               img={article2}
             />
           </ul>
-          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
+          <h2 className="font-bold text-4xl w-full text-center dark:text-light my-16 mt-32">
             Todos os artigos
           </h2>
           <ul>

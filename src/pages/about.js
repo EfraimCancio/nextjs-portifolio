@@ -46,22 +46,25 @@ const about = () => {
       </Head>
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
-          <AnimatedText text="A paixão alimenta o propósito!" className="" />
-          <div className="grid w-full grid-cols-8 gap-16">
-            <div className="col-span-3 flex flex-col items-start justify-start">
+          <AnimatedText
+            text="A paixão alimenta o prosósito!"
+            className="mb-16 sm:mb-8 lg:!text-7x1 sm:!text-6xl xs:!text-4xl"
+          />
+          <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
+            <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg uppercase font-bold text-dark/75 dark:text-light/75">
                 Biografia
               </h2>
               <p className="font-medium">
-                - Olá, sou CodeBucks, um desenvolvedor web e designer de UI/UX
-                com paixão por criar designs bonitos, funcionais, e experiências
-                digitais centradas no usuário. Com 4 anos de experiência na
-                área. estou sempre procurando maneiras novas e inovadoras de dar
-                vida às visões de meus clientes.
+                - Olá, sou Efraim Fonseca, um desenvolvedor web e designer de
+                UI/UX com paixão por criar designs bonitos, funcionais, e
+                experiências digitais centradas no usuário. Com 3 anos de
+                experiência na área. estou sempre procurando maneiras novas e
+                inovadoras de dar vida aos projetos de meus clientes.
               </p>
               <p className="my-4 font-medium">
                 - Eu acredito que o design é mais do que apenas fazer as coisas
-                parecerem bonitas - é sobre resolver problemas e criando
+                parecerem bonitas mas também é sobre resolver problemas e criar
                 experiências intuitivas e agradáveis para os usuários.
               </p>
               <p className="font-medium">
@@ -72,7 +75,7 @@ const about = () => {
                 habilidades e paixão para o seu próximo projeto.
               </p>
             </div>
-            <div className="col-span-3 relative h-max border-2 border-solid border-dark rounded-2xl dark:bg-dark dark:border-light bg-light p-8 mt-8">
+            <div className="col-span-3 relative h-max border-2 border-solid border-dark rounded-2xl dark:bg-dark dark:border-light bg-light p-8 mt-8 xl:col-span-4 md:order-1 md:col-span-8">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
               <Image
                 src={profilePic}
@@ -82,28 +85,28 @@ const about = () => {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <div className="col-span-2 flex flex-col items-end justify-between">
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
-                  <AnimatedNumbers value={50} />+
+            <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                  <AnimatedNumbers value={12} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Clientes atendidos
                 </h2>
               </div>
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
                   <AnimatedNumbers value={40} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Projetos concluidos
                 </h2>
               </div>
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
                   <AnimatedNumbers value={3} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Anos de experiência
                 </h2>
               </div>

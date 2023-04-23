@@ -20,7 +20,6 @@ const Logo = () => {
             "#121212",
           ],
           transition: { duration: 1, repeat: Infinity },
-          scale: 1.5,
         }}
       >
         EF

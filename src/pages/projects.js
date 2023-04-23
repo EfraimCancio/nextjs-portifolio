@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 import { GithubIcon } from "@/components/Icons";
+import TransitionEffect from "@/components/TransitionEffect";
 
 import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
 import project2 from "../../public/images/projects/agency-website-cover-image.jpg";
@@ -129,6 +130,7 @@ const projects = () => {
         <title>Digitalize | Projects Page</title>
         <meta name="description" content="Digitalize" />
       </Head>
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center">
         <Layout className="pt-16">
           <AnimatedText

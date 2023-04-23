@@ -8,6 +8,7 @@ import Link from "next/link";
 
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
+import TransitionEffect from "@/components/TransitionEffect";
 
 import article1 from "../../public/images/articles/create loading screen in react js.jpg";
 import article2 from "../../public/images/articles/create modal component in react using react portals.png";
@@ -117,6 +118,7 @@ const articles = () => {
         <title>Digitalize | articles Page</title>
         <meta name="description" content="Digitalize" />
       </Head>
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
         <Layout className="pt-16">
           <AnimatedText

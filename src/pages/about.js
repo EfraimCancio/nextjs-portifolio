@@ -9,9 +9,10 @@ import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
+import TransitionEffect from "@/components/TransitionEffect";
+import Education from "@/components/Education";
 
 import profilePic from "../../public/images/profile/developer-pic-2.jpeg";
-import Education from "@/components/Education";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -44,6 +45,7 @@ const about = () => {
         <title>Digitalize | About Page</title>
         <meta name="description" content="Digitalize" />
       </Head>
+      <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText

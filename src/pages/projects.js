@@ -21,12 +21,12 @@ const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center justify-between p-12 rounded-3xl border border-solid border-dark dark:border-light  dark:bg-dark bg-light shadow-2xl relative ">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl" />
+    <article className="w-full flex items-center justify-between p-12 rounded-3xl border border-solid border-dark dark:border-light  dark:bg-dark bg-light shadow-2xl relative lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
       <Link
         href={link}
         target="_blank"
-        className="w-1/2 cursor-pointer  overflow-hidden rounded-lg "
+        className="w-1/2 cursor-pointer lg:w-full overflow-hidden rounded-lg "
       >
         <FramerImage
           src={img}
@@ -36,8 +36,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           transition={{ duration: 0.2 }}
         />
       </Link>
-      <div className="w-1/2 flex flex-col items-start justify-between pl-6">
-        <span className="text-primary dark:text-primaryDark font-medium text-xl">
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:pl-0 lg:pt-6 sm:w-full">
+        <span className="text-primary dark:text-primaryDark font-medium text-xl xs:text-base">
           {type}
         </span>
         <Link
@@ -45,11 +45,13 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           target="_blank"
           className="hover:underline hover:underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-4xl dark:text-light font-bold">
+          <h2 className="my-2 w-full text-left text-4xl dark:text-light font-bold sm:text-sm">
             {title}
           </h2>
         </Link>
-        <p className="my-2 font-medium dark:text-light text-dark">{summary}</p>
+        <p className="my-2 font-medium dark:text-light text-dark sm:text-sm">
+          {summary}
+        </p>
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank" className="w-12 dark:text-light">
             <GithubIcon />
@@ -57,7 +59,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           <Link
             href={github}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold"
+            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold sm:px-4 sm:text-base"
           >
             Visite o Projeto
           </Link>
@@ -69,8 +71,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ title, type, img, link, github }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark dark:border-light bg-light dark:bg-dark p-6 relative">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-2xl" />
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark dark:border-light bg-light dark:bg-dark p-6 relative xs:p-4">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-2xl md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
       <Link
         href={link}
         target="_blank"
@@ -87,25 +89,31 @@ const Project = ({ title, type, img, link, github }) => {
         />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary font-medium text-xl">{type}</span>
+        <span className="text-primary dark:text-primaryDark font-medium text-xl lg:text-lg md:text-base">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline hover:underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left dark:text-light text-3xl font-bold">
+          <h2 className="my-2 w-full text-left dark:text-light text-3xl font-bold lg:text-2xl ">
             {title}
           </h2>
         </Link>
         <div className="mt-2 flex items-center justify-between w-full">
           <Link
-            href={github}
+            href={link}
             target="_blank"
-            className="underline text-lg dark:text-light font-semibold"
+            className="underline text-lg dark:text-light font-semibold md:text-base"
           >
             Visite
           </Link>
-          <Link href={github} target="_blank" className="w-8 dark:text-light">
+          <Link
+            href={github}
+            target="_blank"
+            className="w-8 dark:text-light md:w-6"
+          >
             <GithubIcon />
           </Link>
         </div>
@@ -125,9 +133,9 @@ const projects = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="A imaginação supera o conhecimento"
-            className="mb-16"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
-          <div className="grid grid-cols-12 gap-24 gap-y-32">
+          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
                 title="Crypto Screener Application"
@@ -140,7 +148,7 @@ const projects = () => {
                 type="Featured Project"
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Crypto Screener Application"
                 img={project2}
@@ -151,7 +159,7 @@ const projects = () => {
                 github="/"
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Crypto Screener Application"
                 img={project3}
@@ -174,7 +182,7 @@ const projects = () => {
                 type="Featured Project"
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Crypto Screener Application"
                 img={project5}
@@ -185,7 +193,7 @@ const projects = () => {
                 github="/"
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Crypto Screener Application"
                 img={project6}
